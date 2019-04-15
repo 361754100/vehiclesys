@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>	
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="./mysql-connector-java-5.1.46.jar" />
+	<context id="prod">
+		<!-- RowBounds pagination -->
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!-- jdbc连接 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/vehiclesys?useSSL=false" userId="hero"
+			password="rycuj9" />
+
+		<javaModelGenerator targetPackage="com.hro.core.vehiclesys.dao.model"
+			targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="mapper"
+			targetProject="src/main/resources" />
+		<javaClientGenerator targetPackage="com.hro.core.vehiclesys.dao.mapper"
+			targetProject="src/main/java" type="XMLMAPPER" />
+
+		<table tableName="CAR_INFO" domainObjectName="CarInfo">
+			<property name="useActualColumnNames" value="false"/>
+			<generatedKey column="ID" sqlStatement="JDBC" identity="true" />
+		</table>
+		
+	</context>
+</generatorConfiguration>
