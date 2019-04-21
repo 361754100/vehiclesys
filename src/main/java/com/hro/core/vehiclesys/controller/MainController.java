@@ -12,7 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -40,23 +43,20 @@ public class MainController {
         logger.debug(" startTime = {}, endTime = {}, pageNo = {}, pageSize = {}, keywords = {}",
                 new Object[]{startTime, endTime, pageNo, pageSize, keywords});
 
-        VehicleModel model1 = new VehicleModel();
-        model1.setAddress("111");
-        model1.setDate("2019-03-18");
-        model1.setName("test1");
-
-        VehicleModel model2 = new VehicleModel();
-        model2.setAddress("222");
-        model2.setDate("2019-03-18");
-        model2.setName("test2");
-
         List<VehicleModel> records = new ArrayList<>();
-        records.add(model1);
-        records.add(model2);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        for(int i = 0; i< 50; i++) {
+            VehicleModel model = new VehicleModel();
+            model.setAddress("addr_"+ i);
+            model.setDate(dateFormat.format(new Date()));
+            model.setName("test_"+ i);
 
-        wrapper.setPageNo(1);
+            records.add(model);
+        }
+
+        wrapper.setPageNo(pageNo);
         wrapper.setRecords(records);
-        wrapper.setTotalCount(2);
+        wrapper.setTotalCount(101);
         wrapper.setResultCode(100);
         wrapper.setResultMsg("SUCCESS");
 
