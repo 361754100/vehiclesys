@@ -106,542 +106,542 @@ public class CarInfoExample {
         }
 
         public Criteria andIdIsNull() {
-            addCriterion("ID is null");
+            addCriterion("id is null");
             return (Criteria) this;
         }
 
         public Criteria andIdIsNotNull() {
-            addCriterion("ID is not null");
+            addCriterion("id is not null");
             return (Criteria) this;
         }
 
         public Criteria andIdEqualTo(Integer value) {
-            addCriterion("ID =", value, "id");
+            addCriterion("id =", value, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdNotEqualTo(Integer value) {
-            addCriterion("ID <>", value, "id");
+            addCriterion("id <>", value, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdGreaterThan(Integer value) {
-            addCriterion("ID >", value, "id");
+            addCriterion("id >", value, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("ID >=", value, "id");
+            addCriterion("id >=", value, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdLessThan(Integer value) {
-            addCriterion("ID <", value, "id");
+            addCriterion("id <", value, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdLessThanOrEqualTo(Integer value) {
-            addCriterion("ID <=", value, "id");
+            addCriterion("id <=", value, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdIn(List<Integer> values) {
-            addCriterion("ID in", values, "id");
+            addCriterion("id in", values, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdNotIn(List<Integer> values) {
-            addCriterion("ID not in", values, "id");
+            addCriterion("id not in", values, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdBetween(Integer value1, Integer value2) {
-            addCriterion("ID between", value1, value2, "id");
+            addCriterion("id between", value1, value2, "id");
             return (Criteria) this;
         }
 
         public Criteria andIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("ID not between", value1, value2, "id");
+            addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
 
         public Criteria andCarNameIsNull() {
-            addCriterion("CAR_NAME is null");
+            addCriterion("car_name is null");
             return (Criteria) this;
         }
 
         public Criteria andCarNameIsNotNull() {
-            addCriterion("CAR_NAME is not null");
+            addCriterion("car_name is not null");
             return (Criteria) this;
         }
 
         public Criteria andCarNameEqualTo(String value) {
-            addCriterion("CAR_NAME =", value, "carName");
+            addCriterion("car_name =", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameNotEqualTo(String value) {
-            addCriterion("CAR_NAME <>", value, "carName");
+            addCriterion("car_name <>", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameGreaterThan(String value) {
-            addCriterion("CAR_NAME >", value, "carName");
+            addCriterion("car_name >", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameGreaterThanOrEqualTo(String value) {
-            addCriterion("CAR_NAME >=", value, "carName");
+            addCriterion("car_name >=", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameLessThan(String value) {
-            addCriterion("CAR_NAME <", value, "carName");
+            addCriterion("car_name <", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameLessThanOrEqualTo(String value) {
-            addCriterion("CAR_NAME <=", value, "carName");
+            addCriterion("car_name <=", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameLike(String value) {
-            addCriterion("CAR_NAME like", value, "carName");
+            addCriterion("car_name like", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameNotLike(String value) {
-            addCriterion("CAR_NAME not like", value, "carName");
+            addCriterion("car_name not like", value, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameIn(List<String> values) {
-            addCriterion("CAR_NAME in", values, "carName");
+            addCriterion("car_name in", values, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameNotIn(List<String> values) {
-            addCriterion("CAR_NAME not in", values, "carName");
+            addCriterion("car_name not in", values, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameBetween(String value1, String value2) {
-            addCriterion("CAR_NAME between", value1, value2, "carName");
+            addCriterion("car_name between", value1, value2, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNameNotBetween(String value1, String value2) {
-            addCriterion("CAR_NAME not between", value1, value2, "carName");
+            addCriterion("car_name not between", value1, value2, "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNoIsNull() {
-            addCriterion("CAR_NO is null");
+            addCriterion("car_no is null");
             return (Criteria) this;
         }
 
         public Criteria andCarNoIsNotNull() {
-            addCriterion("CAR_NO is not null");
+            addCriterion("car_no is not null");
             return (Criteria) this;
         }
 
         public Criteria andCarNoEqualTo(String value) {
-            addCriterion("CAR_NO =", value, "carNo");
+            addCriterion("car_no =", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoNotEqualTo(String value) {
-            addCriterion("CAR_NO <>", value, "carNo");
+            addCriterion("car_no <>", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoGreaterThan(String value) {
-            addCriterion("CAR_NO >", value, "carNo");
+            addCriterion("car_no >", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoGreaterThanOrEqualTo(String value) {
-            addCriterion("CAR_NO >=", value, "carNo");
+            addCriterion("car_no >=", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoLessThan(String value) {
-            addCriterion("CAR_NO <", value, "carNo");
+            addCriterion("car_no <", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoLessThanOrEqualTo(String value) {
-            addCriterion("CAR_NO <=", value, "carNo");
+            addCriterion("car_no <=", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoLike(String value) {
-            addCriterion("CAR_NO like", value, "carNo");
+            addCriterion("car_no like", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoNotLike(String value) {
-            addCriterion("CAR_NO not like", value, "carNo");
+            addCriterion("car_no not like", value, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoIn(List<String> values) {
-            addCriterion("CAR_NO in", values, "carNo");
+            addCriterion("car_no in", values, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoNotIn(List<String> values) {
-            addCriterion("CAR_NO not in", values, "carNo");
+            addCriterion("car_no not in", values, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoBetween(String value1, String value2) {
-            addCriterion("CAR_NO between", value1, value2, "carNo");
+            addCriterion("car_no between", value1, value2, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarNoNotBetween(String value1, String value2) {
-            addCriterion("CAR_NO not between", value1, value2, "carNo");
+            addCriterion("car_no not between", value1, value2, "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarColorIsNull() {
-            addCriterion("CAR_COLOR is null");
+            addCriterion("car_color is null");
             return (Criteria) this;
         }
 
         public Criteria andCarColorIsNotNull() {
-            addCriterion("CAR_COLOR is not null");
+            addCriterion("car_color is not null");
             return (Criteria) this;
         }
 
         public Criteria andCarColorEqualTo(String value) {
-            addCriterion("CAR_COLOR =", value, "carColor");
+            addCriterion("car_color =", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorNotEqualTo(String value) {
-            addCriterion("CAR_COLOR <>", value, "carColor");
+            addCriterion("car_color <>", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorGreaterThan(String value) {
-            addCriterion("CAR_COLOR >", value, "carColor");
+            addCriterion("car_color >", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorGreaterThanOrEqualTo(String value) {
-            addCriterion("CAR_COLOR >=", value, "carColor");
+            addCriterion("car_color >=", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorLessThan(String value) {
-            addCriterion("CAR_COLOR <", value, "carColor");
+            addCriterion("car_color <", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorLessThanOrEqualTo(String value) {
-            addCriterion("CAR_COLOR <=", value, "carColor");
+            addCriterion("car_color <=", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorLike(String value) {
-            addCriterion("CAR_COLOR like", value, "carColor");
+            addCriterion("car_color like", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorNotLike(String value) {
-            addCriterion("CAR_COLOR not like", value, "carColor");
+            addCriterion("car_color not like", value, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorIn(List<String> values) {
-            addCriterion("CAR_COLOR in", values, "carColor");
+            addCriterion("car_color in", values, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorNotIn(List<String> values) {
-            addCriterion("CAR_COLOR not in", values, "carColor");
+            addCriterion("car_color not in", values, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorBetween(String value1, String value2) {
-            addCriterion("CAR_COLOR between", value1, value2, "carColor");
+            addCriterion("car_color between", value1, value2, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andCarColorNotBetween(String value1, String value2) {
-            addCriterion("CAR_COLOR not between", value1, value2, "carColor");
+            addCriterion("car_color not between", value1, value2, "carColor");
             return (Criteria) this;
         }
 
         public Criteria andRemarkIsNull() {
-            addCriterion("REMARK is null");
+            addCriterion("remark is null");
             return (Criteria) this;
         }
 
         public Criteria andRemarkIsNotNull() {
-            addCriterion("REMARK is not null");
+            addCriterion("remark is not null");
             return (Criteria) this;
         }
 
         public Criteria andRemarkEqualTo(String value) {
-            addCriterion("REMARK =", value, "remark");
+            addCriterion("remark =", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkNotEqualTo(String value) {
-            addCriterion("REMARK <>", value, "remark");
+            addCriterion("remark <>", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkGreaterThan(String value) {
-            addCriterion("REMARK >", value, "remark");
+            addCriterion("remark >", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkGreaterThanOrEqualTo(String value) {
-            addCriterion("REMARK >=", value, "remark");
+            addCriterion("remark >=", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkLessThan(String value) {
-            addCriterion("REMARK <", value, "remark");
+            addCriterion("remark <", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkLessThanOrEqualTo(String value) {
-            addCriterion("REMARK <=", value, "remark");
+            addCriterion("remark <=", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkLike(String value) {
-            addCriterion("REMARK like", value, "remark");
+            addCriterion("remark like", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkNotLike(String value) {
-            addCriterion("REMARK not like", value, "remark");
+            addCriterion("remark not like", value, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkIn(List<String> values) {
-            addCriterion("REMARK in", values, "remark");
+            addCriterion("remark in", values, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkNotIn(List<String> values) {
-            addCriterion("REMARK not in", values, "remark");
+            addCriterion("remark not in", values, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkBetween(String value1, String value2) {
-            addCriterion("REMARK between", value1, value2, "remark");
+            addCriterion("remark between", value1, value2, "remark");
             return (Criteria) this;
         }
 
         public Criteria andRemarkNotBetween(String value1, String value2) {
-            addCriterion("REMARK not between", value1, value2, "remark");
+            addCriterion("remark not between", value1, value2, "remark");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdIsNull() {
-            addCriterion("OWNER_ID is null");
+            addCriterion("owner_id is null");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdIsNotNull() {
-            addCriterion("OWNER_ID is not null");
+            addCriterion("owner_id is not null");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdEqualTo(Integer value) {
-            addCriterion("OWNER_ID =", value, "ownerId");
+            addCriterion("owner_id =", value, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdNotEqualTo(Integer value) {
-            addCriterion("OWNER_ID <>", value, "ownerId");
+            addCriterion("owner_id <>", value, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdGreaterThan(Integer value) {
-            addCriterion("OWNER_ID >", value, "ownerId");
+            addCriterion("owner_id >", value, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("OWNER_ID >=", value, "ownerId");
+            addCriterion("owner_id >=", value, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdLessThan(Integer value) {
-            addCriterion("OWNER_ID <", value, "ownerId");
+            addCriterion("owner_id <", value, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdLessThanOrEqualTo(Integer value) {
-            addCriterion("OWNER_ID <=", value, "ownerId");
+            addCriterion("owner_id <=", value, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdIn(List<Integer> values) {
-            addCriterion("OWNER_ID in", values, "ownerId");
+            addCriterion("owner_id in", values, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdNotIn(List<Integer> values) {
-            addCriterion("OWNER_ID not in", values, "ownerId");
+            addCriterion("owner_id not in", values, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdBetween(Integer value1, Integer value2) {
-            addCriterion("OWNER_ID between", value1, value2, "ownerId");
+            addCriterion("owner_id between", value1, value2, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andOwnerIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("OWNER_ID not between", value1, value2, "ownerId");
+            addCriterion("owner_id not between", value1, value2, "ownerId");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeIsNull() {
-            addCriterion("CREATION_TIME is null");
+            addCriterion("creation_time is null");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeIsNotNull() {
-            addCriterion("CREATION_TIME is not null");
+            addCriterion("creation_time is not null");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeEqualTo(Date value) {
-            addCriterion("CREATION_TIME =", value, "creationTime");
+            addCriterion("creation_time =", value, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeNotEqualTo(Date value) {
-            addCriterion("CREATION_TIME <>", value, "creationTime");
+            addCriterion("creation_time <>", value, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeGreaterThan(Date value) {
-            addCriterion("CREATION_TIME >", value, "creationTime");
+            addCriterion("creation_time >", value, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("CREATION_TIME >=", value, "creationTime");
+            addCriterion("creation_time >=", value, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeLessThan(Date value) {
-            addCriterion("CREATION_TIME <", value, "creationTime");
+            addCriterion("creation_time <", value, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeLessThanOrEqualTo(Date value) {
-            addCriterion("CREATION_TIME <=", value, "creationTime");
+            addCriterion("creation_time <=", value, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeIn(List<Date> values) {
-            addCriterion("CREATION_TIME in", values, "creationTime");
+            addCriterion("creation_time in", values, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeNotIn(List<Date> values) {
-            addCriterion("CREATION_TIME not in", values, "creationTime");
+            addCriterion("creation_time not in", values, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeBetween(Date value1, Date value2) {
-            addCriterion("CREATION_TIME between", value1, value2, "creationTime");
+            addCriterion("creation_time between", value1, value2, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andCreationTimeNotBetween(Date value1, Date value2) {
-            addCriterion("CREATION_TIME not between", value1, value2, "creationTime");
+            addCriterion("creation_time not between", value1, value2, "creationTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeIsNull() {
-            addCriterion("UPDATE_TIME is null");
+            addCriterion("update_time is null");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeIsNotNull() {
-            addCriterion("UPDATE_TIME is not null");
+            addCriterion("update_time is not null");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeEqualTo(Date value) {
-            addCriterion("UPDATE_TIME =", value, "updateTime");
+            addCriterion("update_time =", value, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeNotEqualTo(Date value) {
-            addCriterion("UPDATE_TIME <>", value, "updateTime");
+            addCriterion("update_time <>", value, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeGreaterThan(Date value) {
-            addCriterion("UPDATE_TIME >", value, "updateTime");
+            addCriterion("update_time >", value, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("UPDATE_TIME >=", value, "updateTime");
+            addCriterion("update_time >=", value, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeLessThan(Date value) {
-            addCriterion("UPDATE_TIME <", value, "updateTime");
+            addCriterion("update_time <", value, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeLessThanOrEqualTo(Date value) {
-            addCriterion("UPDATE_TIME <=", value, "updateTime");
+            addCriterion("update_time <=", value, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeIn(List<Date> values) {
-            addCriterion("UPDATE_TIME in", values, "updateTime");
+            addCriterion("update_time in", values, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeNotIn(List<Date> values) {
-            addCriterion("UPDATE_TIME not in", values, "updateTime");
+            addCriterion("update_time not in", values, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeBetween(Date value1, Date value2) {
-            addCriterion("UPDATE_TIME between", value1, value2, "updateTime");
+            addCriterion("update_time between", value1, value2, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andUpdateTimeNotBetween(Date value1, Date value2) {
-            addCriterion("UPDATE_TIME not between", value1, value2, "updateTime");
+            addCriterion("update_time not between", value1, value2, "updateTime");
             return (Criteria) this;
         }
 
         public Criteria andCarNameLikeInsensitive(String value) {
-            addCriterion("upper(CAR_NAME) like", value.toUpperCase(), "carName");
+            addCriterion("upper(car_name) like", value.toUpperCase(), "carName");
             return (Criteria) this;
         }
 
         public Criteria andCarNoLikeInsensitive(String value) {
-            addCriterion("upper(CAR_NO) like", value.toUpperCase(), "carNo");
+            addCriterion("upper(car_no) like", value.toUpperCase(), "carNo");
             return (Criteria) this;
         }
 
         public Criteria andCarColorLikeInsensitive(String value) {
-            addCriterion("upper(CAR_COLOR) like", value.toUpperCase(), "carColor");
+            addCriterion("upper(car_color) like", value.toUpperCase(), "carColor");
             return (Criteria) this;
         }
 
         public Criteria andRemarkLikeInsensitive(String value) {
-            addCriterion("upper(REMARK) like", value.toUpperCase(), "remark");
+            addCriterion("upper(remark) like", value.toUpperCase(), "remark");
             return (Criteria) this;
         }
     }

@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.hro.core.vehiclesys.dao.mapper.CarInfoMapper" >
   <resultMap id="BaseResultMap" type="com.hro.core.vehiclesys.dao.model.CarInfo" >
-    <id column="ID" property="id" jdbcType="INTEGER" />
-    <result column="CAR_NAME" property="carName" jdbcType="VARCHAR" />
-    <result column="CAR_NO" property="carNo" jdbcType="VARCHAR" />
-    <result column="CAR_COLOR" property="carColor" jdbcType="VARCHAR" />
-    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
-    <result column="OWNER_ID" property="ownerId" jdbcType="INTEGER" />
-    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
-    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="car_name" property="carName" jdbcType="VARCHAR" />
+    <result column="car_no" property="carNo" jdbcType="VARCHAR" />
+    <result column="car_color" property="carColor" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="owner_id" property="ownerId" jdbcType="INTEGER" />
+    <result column="creation_time" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -70,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    ID, CAR_NAME, CAR_NO, CAR_COLOR, REMARK, OWNER_ID, CREATION_TIME, UPDATE_TIME
+    id, car_name, car_no, car_color, remark, owner_id, creation_time, update_time
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.hro.core.vehiclesys.dao.model.CarInfoExample" >
     select
@@ -90,11 +90,11 @@
     select 
     <include refid="Base_Column_List" />
     from car_info
-    where ID = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from car_info
-    where ID = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.hro.core.vehiclesys.dao.model.CarInfoExample" >
     delete from car_info
@@ -103,9 +103,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.hro.core.vehiclesys.dao.model.CarInfo" useGeneratedKeys="true" keyProperty="id" >
-    insert into car_info (CAR_NAME, CAR_NO, CAR_COLOR, 
-      REMARK, OWNER_ID, CREATION_TIME, 
-      UPDATE_TIME)
+    insert into car_info (car_name, car_no, car_color, 
+      remark, owner_id, creation_time, 
+      update_time)
     values (#{carName,jdbcType=VARCHAR}, #{carNo,jdbcType=VARCHAR}, #{carColor,jdbcType=VARCHAR}, 
       #{remark,jdbcType=VARCHAR}, #{ownerId,jdbcType=INTEGER}, #{creationTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
@@ -114,25 +114,25 @@
     insert into car_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="carName != null" >
-        CAR_NAME,
+        car_name,
       </if>
       <if test="carNo != null" >
-        CAR_NO,
+        car_no,
       </if>
       <if test="carColor != null" >
-        CAR_COLOR,
+        car_color,
       </if>
       <if test="remark != null" >
-        REMARK,
+        remark,
       </if>
       <if test="ownerId != null" >
-        OWNER_ID,
+        owner_id,
       </if>
       <if test="creationTime != null" >
-        CREATION_TIME,
+        creation_time,
       </if>
       <if test="updateTime != null" >
-        UPDATE_TIME,
+        update_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -169,28 +169,28 @@
     update car_info
     <set >
       <if test="record.id != null" >
-        ID = #{record.id,jdbcType=INTEGER},
+        id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.carName != null" >
-        CAR_NAME = #{record.carName,jdbcType=VARCHAR},
+        car_name = #{record.carName,jdbcType=VARCHAR},
       </if>
       <if test="record.carNo != null" >
-        CAR_NO = #{record.carNo,jdbcType=VARCHAR},
+        car_no = #{record.carNo,jdbcType=VARCHAR},
       </if>
       <if test="record.carColor != null" >
-        CAR_COLOR = #{record.carColor,jdbcType=VARCHAR},
+        car_color = #{record.carColor,jdbcType=VARCHAR},
       </if>
       <if test="record.remark != null" >
-        REMARK = #{record.remark,jdbcType=VARCHAR},
+        remark = #{record.remark,jdbcType=VARCHAR},
       </if>
       <if test="record.ownerId != null" >
-        OWNER_ID = #{record.ownerId,jdbcType=INTEGER},
+        owner_id = #{record.ownerId,jdbcType=INTEGER},
       </if>
       <if test="record.creationTime != null" >
-        CREATION_TIME = #{record.creationTime,jdbcType=TIMESTAMP},
+        creation_time = #{record.creationTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.updateTime != null" >
-        UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -199,14 +199,14 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update car_info
-    set ID = #{record.id,jdbcType=INTEGER},
-      CAR_NAME = #{record.carName,jdbcType=VARCHAR},
-      CAR_NO = #{record.carNo,jdbcType=VARCHAR},
-      CAR_COLOR = #{record.carColor,jdbcType=VARCHAR},
-      REMARK = #{record.remark,jdbcType=VARCHAR},
-      OWNER_ID = #{record.ownerId,jdbcType=INTEGER},
-      CREATION_TIME = #{record.creationTime,jdbcType=TIMESTAMP},
-      UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP}
+    set id = #{record.id,jdbcType=INTEGER},
+      car_name = #{record.carName,jdbcType=VARCHAR},
+      car_no = #{record.carNo,jdbcType=VARCHAR},
+      car_color = #{record.carColor,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      owner_id = #{record.ownerId,jdbcType=INTEGER},
+      creation_time = #{record.creationTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -215,39 +215,39 @@
     update car_info
     <set >
       <if test="carName != null" >
-        CAR_NAME = #{carName,jdbcType=VARCHAR},
+        car_name = #{carName,jdbcType=VARCHAR},
       </if>
       <if test="carNo != null" >
-        CAR_NO = #{carNo,jdbcType=VARCHAR},
+        car_no = #{carNo,jdbcType=VARCHAR},
       </if>
       <if test="carColor != null" >
-        CAR_COLOR = #{carColor,jdbcType=VARCHAR},
+        car_color = #{carColor,jdbcType=VARCHAR},
       </if>
       <if test="remark != null" >
-        REMARK = #{remark,jdbcType=VARCHAR},
+        remark = #{remark,jdbcType=VARCHAR},
       </if>
       <if test="ownerId != null" >
-        OWNER_ID = #{ownerId,jdbcType=INTEGER},
+        owner_id = #{ownerId,jdbcType=INTEGER},
       </if>
       <if test="creationTime != null" >
-        CREATION_TIME = #{creationTime,jdbcType=TIMESTAMP},
+        creation_time = #{creationTime,jdbcType=TIMESTAMP},
       </if>
       <if test="updateTime != null" >
-        UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where ID = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.hro.core.vehiclesys.dao.model.CarInfo" >
     update car_info
-    set CAR_NAME = #{carName,jdbcType=VARCHAR},
-      CAR_NO = #{carNo,jdbcType=VARCHAR},
-      CAR_COLOR = #{carColor,jdbcType=VARCHAR},
-      REMARK = #{remark,jdbcType=VARCHAR},
-      OWNER_ID = #{ownerId,jdbcType=INTEGER},
-      CREATION_TIME = #{creationTime,jdbcType=TIMESTAMP},
-      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP}
-    where ID = #{id,jdbcType=INTEGER}
+    set car_name = #{carName,jdbcType=VARCHAR},
+      car_no = #{carNo,jdbcType=VARCHAR},
+      car_color = #{carColor,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      owner_id = #{ownerId,jdbcType=INTEGER},
+      creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <select resultMap="BaseResultMap" parameterType="com.hro.core.vehiclesys.dao.model.CarInfoExample" id="selectByExampleWithRowbounds" >
     select

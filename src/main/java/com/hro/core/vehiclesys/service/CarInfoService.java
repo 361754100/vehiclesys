@@ -13,5 +13,12 @@ public interface CarInfoService {
      * @param req
      * @return
      */
-    public CommonWrapper addInfo(EditCarInfoReq req);
+    CommonWrapper addInfo(EditCarInfoReq req);
+
+    /**
+     * 更新车辆信息
+     * @param req
+     * @return
+     */
+    CommonWrapper updateInfo(EditCarInfoReq req);
 }
