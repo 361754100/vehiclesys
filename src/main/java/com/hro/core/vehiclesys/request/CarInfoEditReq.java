@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 编辑车辆信息
  */
 @ApiModel(description = "车辆信息消息体")
-public class EditCarInfoReq implements Serializable {
+public class CarInfoEditReq implements Serializable {
 
     @ApiModelProperty(value = "记录ID")
     private int recordId;

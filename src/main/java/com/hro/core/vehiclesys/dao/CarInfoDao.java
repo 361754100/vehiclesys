@@ -79,4 +79,17 @@ public class CarInfoDao {
         result = carInfoMapper.selectByExample(example);
         return result;
     }
+
+    /**
+     * 分页查询
+     * @param pageNo
+     * @param pageSize
+     * @param beginTime
+     * @param endTime
+     * @param carNo
+     * @return
+     */
+    public List<CarInfo> queryPage(int pageNo, int pageSize, String beginTime, String endTime, String carNo) {
+        return null;
+    }
 }

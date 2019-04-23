@@ -1,7 +1,7 @@
 package com.hro.core.vehiclesys.controller;
 
 import com.hro.core.vehiclesys.dao.model.VehicleModel;
-import com.hro.core.vehiclesys.request.EditCarInfoReq;
+import com.hro.core.vehiclesys.request.CarInfoEditReq;
 import com.hro.core.vehiclesys.response.CommonWrapper;
 import com.hro.core.vehiclesys.response.PageSearchWrapper;
 import io.swagger.annotations.Api;
@@ -17,7 +17,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 
 @Api(tags = "main", description = "车辆相关API")
@@ -72,7 +71,7 @@ public class MainController {
 //            @ApiImplicitParam(name="keywords", value = "关键字", required = true, paramType = "form", dataType = "String")
 //    })
     @PostMapping(value = "/vehicle/add")
-    public CommonWrapper add(@RequestBody EditCarInfoReq params) {
+    public CommonWrapper add(@RequestBody CarInfoEditReq params) {
         CommonWrapper wrapper = new CommonWrapper();
 
         logger.debug(" params = {}",

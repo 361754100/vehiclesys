@@ -3,8 +3,9 @@ package com.hro.core.vehiclesys.service.impl;
 import com.hro.core.vehiclesys.dao.CarInfoDao;
 import com.hro.core.vehiclesys.dao.model.CarInfo;
 import com.hro.core.vehiclesys.enums.ResultCodeEnum;
-import com.hro.core.vehiclesys.request.EditCarInfoReq;
+import com.hro.core.vehiclesys.request.CarInfoEditReq;
 import com.hro.core.vehiclesys.response.CommonWrapper;
+import com.hro.core.vehiclesys.response.PageSearchWrapper;
 import com.hro.core.vehiclesys.service.CarInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public class CarInfoServiceImpl implements CarInfoService {
     private CarInfoDao carInfoDao;
 
     @Override
-    public CommonWrapper addInfo(EditCarInfoReq req) {
+    public CommonWrapper addInfo(CarInfoEditReq req) {
         CommonWrapper wrapper = new CommonWrapper();
         wrapper.setResultCode(ResultCodeEnum.FAILURE.getCode());
 
@@ -47,7 +48,7 @@ public class CarInfoServiceImpl implements CarInfoService {
     }
 
     @Override
-    public CommonWrapper updateInfo(EditCarInfoReq req) {
+    public CommonWrapper updateInfo(CarInfoEditReq req) {
         CommonWrapper wrapper = new CommonWrapper();
         wrapper.setResultCode(ResultCodeEnum.FAILURE.getCode());
 
@@ -65,6 +66,14 @@ public class CarInfoServiceImpl implements CarInfoService {
             wrapper.setResultMsg(ResultCodeEnum.SUCCESS.getDesc());
         }
         return wrapper;
+    }
+
+    @Override
+    public PageSearchWrapper queryPage(int pageNo, int pageSize, String beginTime, String endTime, String carNo) {
+        PageSearchWrapper wrapper = new PageSearchWrapper();
+
+
+        return null;
     }
 
     private boolean isExists(String carNo) {
