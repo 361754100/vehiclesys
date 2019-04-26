@@ -74,9 +74,8 @@ public class CarInfoDao {
         if(!StringUtils.isEmpty(carNo)) {
             criteria.andCarNoEqualTo(carNo);
         }
-        int ownerId = condition.getOwnerId();
-        if(ownerId != 0 ) {
-            criteria.andOwnerIdEqualTo(ownerId);
+        if(condition.getOwnerId() != null && condition.getOwnerId() != 0 ) {
+            criteria.andOwnerIdEqualTo(condition.getOwnerId());
         }
         result = carInfoMapper.selectByExample(example);
         return result;
