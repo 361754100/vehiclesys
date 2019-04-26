@@ -14,7 +14,7 @@ public class CommonWrapper implements Serializable{
     /**
      * 处理结果
      */
-    public String resultMsg;
+    public String resultMsg = "";
 
     public int getResultCode() {
         return resultCode;

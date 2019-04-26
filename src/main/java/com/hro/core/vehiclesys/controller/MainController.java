@@ -1,23 +1,17 @@
 package com.hro.core.vehiclesys.controller;
 
-import com.hro.core.vehiclesys.dao.model.VehicleModel;
 import com.hro.core.vehiclesys.request.CarInfoEditReq;
 import com.hro.core.vehiclesys.response.CommonWrapper;
 import com.hro.core.vehiclesys.response.PageSearchWrapper;
+import com.hro.core.vehiclesys.service.CarInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 
 @Api(tags = "main", description = "车辆相关API")
 @RestController
@@ -25,6 +19,9 @@ import java.util.List;
 public class MainController {
 
     private static Logger logger = LoggerFactory.getLogger(MainController.class);
+
+    @Autowired
+    private CarInfoService carInfoService;
 
     @ApiOperation(value = "分页查询")
     @ApiImplicitParams({
@@ -37,27 +34,27 @@ public class MainController {
     @PostMapping(value = "/vehicle/page_search")
     public PageSearchWrapper pageSearch(@RequestParam String startTime, @RequestParam String endTime,
                                         @RequestParam int pageNo, @RequestParam int pageSize, @RequestParam String keywords) {
-        PageSearchWrapper wrapper = new PageSearchWrapper();
+        PageSearchWrapper wrapper = carInfoService.queryPage(pageNo, pageSize, startTime, endTime, keywords);
 
         logger.debug(" startTime = {}, endTime = {}, pageNo = {}, pageSize = {}, keywords = {}",
                 new Object[]{startTime, endTime, pageNo, pageSize, keywords});
 
-        List<VehicleModel> records = new ArrayList<>();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        for(int i = 0; i< 50; i++) {
-            VehicleModel model = new VehicleModel();
-            model.setAddress("addr_"+ i);
-            model.setDate(dateFormat.format(new Date()));
-            model.setName("test_"+ i);
-
-            records.add(model);
-        }
-
-        wrapper.setPageNo(pageNo);
-        wrapper.setRecords(records);
-        wrapper.setTotalCount(101);
-        wrapper.setResultCode(100);
-        wrapper.setResultMsg("SUCCESS");
+//        List<VehicleModel> records = new ArrayList<>();
+//        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        for(int i = 0; i< 50; i++) {
+//            VehicleModel model = new VehicleModel();
+//            model.setAddress("addr_"+ i);
+//            model.setDate(dateFormat.format(new Date()));
+//            model.setName("test_"+ i);
+//
+//            records.add(model);
+//        }
+//
+//        wrapper.setPageNo(pageNo);
+//        wrapper.setRecords(records);
+//        wrapper.setTotalCount(101);
+//        wrapper.setResultCode(100);
+//        wrapper.setResultMsg("SUCCESS");
 
         return wrapper;
     }

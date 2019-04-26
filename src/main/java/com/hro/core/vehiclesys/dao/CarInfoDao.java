@@ -3,6 +3,8 @@ package com.hro.core.vehiclesys.dao;
 import com.hro.core.vehiclesys.dao.mapper.CarInfoMapper;
 import com.hro.core.vehiclesys.dao.model.CarInfo;
 import com.hro.core.vehiclesys.dao.model.CarInfoExample;
+import com.hro.core.vehiclesys.utils.DateUtils;
+import com.hro.core.vehiclesys.utils.RowBoundsUtil;
 import com.hro.core.vehiclesys.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -90,6 +92,46 @@ public class CarInfoDao {
      * @return
      */
     public List<CarInfo> queryPage(int pageNo, int pageSize, String beginTime, String endTime, String carNo) {
-        return null;
+        int offset = (pageNo-1)*pageSize;
+        CarInfoExample example = new CarInfoExample();
+        CarInfoExample.Criteria criteria = example.createCriteria();
+
+        if(!StringUtils.isEmpty(carNo)) {
+            criteria.andCarNoLike("%" + carNo + "%");
+        }
+        if(!StringUtils.isEmpty(beginTime)) {
+            criteria.andCreationTimeGreaterThanOrEqualTo(DateUtils.parseStrToDate(beginTime,"yyyy-MM-dd HH:mm:ss"));
+        }
+        if(!StringUtils.isEmpty(endTime)) {
+            criteria.andCreationTimeLessThanOrEqualTo(DateUtils.parseStrToDate(endTime, "yyyy-MM-dd HH:mm:ss"));
+        }
+
+        List<CarInfo> result = carInfoMapper.selectByExampleWithRowbounds(example, RowBoundsUtil.of(offset, pageSize));
+        return result;
+    }
+
+    /**
+     * 获取分页查询的记录总数
+     * @param beginTime
+     * @param endTime
+     * @param carNo
+     * @return
+     */
+    public int queryPageTotal(String beginTime, String endTime, String carNo) {
+        CarInfoExample example = new CarInfoExample();
+        CarInfoExample.Criteria criteria = example.createCriteria();
+
+        if(!StringUtils.isEmpty(carNo)) {
+            criteria.andCarNoLike("%" + carNo + "%");
+        }
+        if(!StringUtils.isEmpty(beginTime)) {
+            criteria.andCreationTimeGreaterThanOrEqualTo(DateUtils.parseStrToDate(beginTime,"yyyy-MM-dd HH:mm:ss"));
+        }
+        if(!StringUtils.isEmpty(endTime)) {
+            criteria.andCreationTimeLessThanOrEqualTo(DateUtils.parseStrToDate(endTime, "yyyy-MM-dd HH:mm:ss"));
+        }
+
+        int total = carInfoMapper.countByExample(example);
+        return total;
     }
 }

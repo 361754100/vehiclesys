@@ -72,8 +72,15 @@ public class CarInfoServiceImpl implements CarInfoService {
     public PageSearchWrapper queryPage(int pageNo, int pageSize, String beginTime, String endTime, String carNo) {
         PageSearchWrapper wrapper = new PageSearchWrapper();
 
+        int total = carInfoDao.queryPageTotal(beginTime, endTime, carNo);
+        List<CarInfo> result = carInfoDao.queryPage(pageNo, pageSize, beginTime, endTime, carNo);
 
-        return null;
+        wrapper.setTotalCount(total);
+        wrapper.setPageNo(pageNo);
+        wrapper.setRecords(result);
+        wrapper.setResultCode(ResultCodeEnum.SUCCESS.getCode());
+        
+        return wrapper;
     }
 
     private boolean isExists(String carNo) {
