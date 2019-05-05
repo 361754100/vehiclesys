@@ -263,4 +263,10 @@
       order by ${orderByClause}
     </if>
   </select>
+  <delete id="batchDelete"  parameterType = "java.util.List">
+    delete from car_info where id in
+    <foreach collection="ids"  item="item" open="(" separator="," close=")"  >
+      #{item}
+    </foreach>
+  </delete>
 </mapper>

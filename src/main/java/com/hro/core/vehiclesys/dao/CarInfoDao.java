@@ -44,15 +44,11 @@ public class CarInfoDao {
 
     /**
      * 删除车辆信息
-     * @param id
+     * @param ids
      * @return
      */
-    public int delete(int id) {
-        int cnt = 0;
-        CarInfoExample example = new CarInfoExample();
-        example.createCriteria().andIdEqualTo(id);
-
-        cnt = carInfoMapper.deleteByExample(example);
+    public int delete(List<Integer> ids) {
+        int cnt = carInfoMapper.batchDelete(ids);
         return cnt;
     }
 
@@ -113,21 +109,21 @@ public class CarInfoDao {
      * 获取分页查询的记录总数
      * @param beginTime
      * @param endTime
-     * @param carNo
+     * @param keywords
      * @return
      */
-    public int queryPageTotal(String beginTime, String endTime, String carNo) {
+    public int queryPageTotal(String beginTime, String endTime, String keywords) {
         CarInfoExample example = new CarInfoExample();
         CarInfoExample.Criteria criteria = example.createCriteria();
 
-        if(!StringUtils.isEmpty(carNo)) {
-            criteria.andCarNoLike("%" + carNo + "%");
-        }
         if(!StringUtils.isEmpty(beginTime)) {
             criteria.andCreationTimeGreaterThanOrEqualTo(DateUtils.parseStrToDate(beginTime,"yyyy-MM-dd HH:mm:ss"));
         }
         if(!StringUtils.isEmpty(endTime)) {
             criteria.andCreationTimeLessThanOrEqualTo(DateUtils.parseStrToDate(endTime, "yyyy-MM-dd HH:mm:ss"));
+        }
+        if(!StringUtils.isEmpty(keywords)) {
+            criteria.andCarNoLike("%" + keywords + "%");
         }
 
         int total = carInfoMapper.countByExample(example);

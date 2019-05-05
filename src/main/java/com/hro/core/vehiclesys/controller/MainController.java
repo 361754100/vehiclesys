@@ -1,5 +1,6 @@
 package com.hro.core.vehiclesys.controller;
 
+import com.hro.core.vehiclesys.request.CarInfoDelReq;
 import com.hro.core.vehiclesys.request.CarInfoEditReq;
 import com.hro.core.vehiclesys.response.CommonWrapper;
 import com.hro.core.vehiclesys.response.PageSearchWrapper;
@@ -12,6 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = "main", description = "车辆相关API")
 @RestController
@@ -60,9 +63,9 @@ public class MainController {
 
     @ApiOperation(value = "删除车辆信息")
     @PostMapping(value = "/vehicle/delete")
-    public CommonWrapper delete(@RequestBody CarInfoEditReq params) {
+    public CommonWrapper delete(@RequestBody CarInfoDelReq params) {
         logger.debug(" params = {}", new Object[]{params});
-        CommonWrapper wrapper = carInfoService.updateInfo(params);
+        CommonWrapper wrapper = carInfoService.deleteInfo(params.getIds());
         return wrapper;
     }
 }

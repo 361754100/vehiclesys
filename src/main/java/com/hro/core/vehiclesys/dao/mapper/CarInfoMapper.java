@@ -30,4 +30,6 @@ public interface CarInfoMapper {
     int updateByPrimaryKeySelective(CarInfo record);
 
     int updateByPrimaryKey(CarInfo record);
+
+    int batchDelete(@Param("ids") List<Integer> ids);
 }

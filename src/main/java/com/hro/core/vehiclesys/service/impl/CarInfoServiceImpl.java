@@ -69,11 +69,23 @@ public class CarInfoServiceImpl implements CarInfoService {
     }
 
     @Override
-    public PageSearchWrapper queryPage(int pageNo, int pageSize, String beginTime, String endTime, String carNo) {
+    public CommonWrapper deleteInfo(List<Integer> ids) {
+        CommonWrapper wrapper = new CommonWrapper();
+        wrapper.setResultCode(ResultCodeEnum.FAILURE.getCode());
+        int cnt = carInfoDao.delete(ids);
+        if(cnt > 0) {
+            wrapper.setResultCode(ResultCodeEnum.SUCCESS.getCode());
+            wrapper.setResultMsg("成功删除【"+ cnt +"】条记录");
+        }
+        return wrapper;
+    }
+
+    @Override
+    public PageSearchWrapper queryPage(int pageNo, int pageSize, String beginTime, String endTime, String keywords) {
         PageSearchWrapper wrapper = new PageSearchWrapper();
 
-        int total = carInfoDao.queryPageTotal(beginTime, endTime, carNo);
-        List<CarInfo> result = carInfoDao.queryPage(pageNo, pageSize, beginTime, endTime, carNo);
+        int total = carInfoDao.queryPageTotal(beginTime, endTime, keywords);
+        List<CarInfo> result = carInfoDao.queryPage(pageNo, pageSize, beginTime, endTime, keywords);
 
         wrapper.setTotalCount(total);
         wrapper.setPageNo(pageNo);
